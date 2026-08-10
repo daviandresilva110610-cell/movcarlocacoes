@@ -3,127 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOV CAR - Mobilidade Inteligente</title>
+    <title>MOV CAR | Mobilidade Urbana & Locação Inteligente</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <img src="transparente.png" alt="MOV CAR" class="logo">
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="transparente.png" alt="MOV CAR" class="logo">
+            </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu de Navegação">
+                <i data-lucide="menu" class="icon-open"></i>
+                <i data-lucide="x" class="icon-close"></i>
+            </button>
 
-    <nav id="navMenu">
-        <ul>
-            <li><a href="#" class="nav-link">Início</a></li>
-            <li><a href="#secao_sobre" class="nav-link">Sobre</a></li>
-            <li><a href="#secao_funciona" class="nav-link">Como Funciona</a></li>
-            <li><a href="#secao_duvida" class="nav-link">Dúvidas</a></li>
-            <li><a href="#secao_contato" class="nav-link">Contato</a></li>
-        </ul>
-    </nav>
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">Início</a></li>
+                    <li><a href="#secao_sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#secao_funciona" class="nav-link">Como Funciona</a></li>
+                    <li><a href="#secao_duvida" class="nav-link">Dúvidas</a></li>
+                    <li><a href="#secao_contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
 
-    <div class="contato-container">
-        <a href="#secao_contato" class="botao-contato">Cadastrar-se</a>
-    </div>
-</header>
-
-<section class="hero">
-    <span class="hero-badge">A revolução da mobilidade</span>
-    <h1>A Mobilidade que Impulsiona Você</h1>
-    <p>Soluções inteligentes, seguras e eficientes para motoristas de aplicativo.</p>
-    <a href="#" class="hero-botao">Faça sua reserva agora</a>
-</section>
-
-<section id="secao_sobre" class="sobre">
-    <h2 class="titulo-secao">Sobre a MOV CAR</h2>
-    <p class="subtitulo-secao">Conheça nossa visão e compromisso com o transporte do futuro</p>
-
-    <div class="sobre-conteudo">
-        <p>
-            A <strong>MOV CAR</strong> foi criada para simplificar a mobilidade urbana, 
-            oferecendo soluções modernas para motoristas e passageiros. 
-            Nosso objetivo é tornar cada viagem mais rápida, eficiente e totalmente segura.
-        </p>
-    </div>
-</section>
-
-<section id="secao_funciona" class="funciona">
-    <h2 class="titulo-secao">Como Funciona</h2>
-    <p class="subtitulo-secao">Simplicidade em apenas 3 passos práticos</p>
-
-    <div class="cards">
-        <div class="card">
-            <span class="card-numero">01</span>
-            <h3>Cadastro Simplificado</h3>
-            <p>Crie sua conta na plataforma em poucos minutos com total praticidade.</p>
+            <div class="header-cta">
+                <a href="#secao_contato" class="btn btn-outline">Entrar em Contato</a>
+            </div>
         </div>
+    </header>
 
-        <div class="card">
-            <span class="card-numero">02</span>
-            <h3>Solicitação Rápida</h3>
-            <p>Escolha o serviço desejado sem complicações e com transparência.</p>
+    <main>
+        <section class="hero">
+            <div class="container hero-container">
+                <span class="badge">
+                    <i data-lucide="sparkles" class="badge-icon"></i> A revolução da mobilidade
+                </span>
+                <h1 class="hero-title">A Mobilidade que Impulsiona Você</h1>
+                <p class="hero-description">
+                    Soluções inteligentes, seguras e eficientes desenvolvidas para motoristas de aplicativo que buscam alta performance.
+                </p>
+                <div class="hero-actions">
+                    <a href="#secao_contato" class="btn btn-primary">
+                        Faça sua reserva agora <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao_sobre" class="section sobre">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="titulo-secao">Sobre a MOV CAR</h2>
+                    <p class="subtitulo-secao">Conheça nossa visão e compromisso com o transporte do futuro</p>
+                </div>
+
+                <div class="sobre-card">
+                    <p class="sobre-texto">
+                        A <strong>MOV CAR</strong> nasceu para descomplicação da mobilidade urbana. 
+                        Oferecemos soluções completas e flexíveis para motoristas parceiros e passageiros, 
+                        garantindo que cada quilômetro percorrido entregue máxima segurança, economia e agilidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao_funciona" class="section funciona">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="titulo-secao">Como Funciona</h2>
+                    <p class="subtitulo-secao">Sua jornada simplificada em apenas 3 passos práticos</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-step">01</span>
+                            <i data-lucide="user-check" class="card-icon"></i>
+                        </div>
+                        <h3>Cadastro Simplificado</h3>
+                        <p>Envie sua documentação em poucos cliques através da nossa plataforma 100% digital.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-step">02</span>
+                            <i data-lucide="car" class="card-icon"></i>
+                        </div>
+                        <h3>Retirada Rápida</h3>
+                        <p>Escolha o veículo ideal para sua rotina com total transparência e sem burocracias.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="card-step">03</span>
+                            <i data-lucide="shield-check" class="card-icon"></i>
+                        </div>
+                        <h3>Mobilidade & Suporte</h3>
+                        <p>Rode com tranquilidade sabendo que você conta com assistência técnica e suporte 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao_duvida" class="section duvidas">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="titulo-secao">Dúvidas Frequentes</h2>
+                    <p class="subtitulo-secao">Respostas diretas para as perguntas mais comuns</p>
+                </div>
+
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Como faço meu cadastro?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Basta clicar no botão de contato ou reserva, enviar seus documentos básicos (CNH válida e comprovante de residência) e aguardar a validação expressa da nossa equipe.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>O serviço é seguro?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Com certeza. Todos os nossos veículos possuem seguro completo, rastreamento via satélite, manutenção preventiva em dia e suporte emergencial 24 horas.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Quais são as formas de pagamento aceitas?</span>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Trabalhamos com PIX, cartão de crédito, boleto bancário e transferência, garantindo praticidade no seu planejamento financeiro.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="secao_contato" class="section contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="titulo-secao">Entre em Contato</h2>
+                    <p class="subtitulo-secao">Fale diretamente com nossa equipe de atendimento</p>
+                </div>
+
+                <div class="contato-grid">
+                    <a href="mailto:movcarlocacoes@gmail.com" class="contato-card">
+                        <div class="contato-icon-wrapper">
+                            <i data-lucide="mail"></i>
+                        </div>
+                        <span class="contato-label">E-mail</span>
+                        <strong class="contato-value">movcarlocacoes@gmail.com</strong>
+                    </a>
+
+                    <a href="https://wa.me/5519998318093" target="_blank" rel="noopener noreferrer" class="contato-card">
+                        <div class="contato-icon-wrapper">
+                            <i data-lucide="phone"></i>
+                        </div>
+                        <span class="contato-label">Telefone / WhatsApp</span>
+                        <strong class="contato-value">(19) 99831-8093</strong>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2026 MOV CAR. Todos os direitos reservados.</p>
         </div>
+    </footer>
 
-        <div class="card">
-            <span class="card-numero">03</span>
-            <h3>Mobilidade Total</h3>
-            <p>Acompanhe tudo em tempo real diretamente pelo seu aplicativo.</p>
-        </div>
-    </div>
-</section>
-
-<section id="secao_duvida" class="duvidas">
-    <h2 class="titulo-secao">Dúvidas Frequentes</h2>
-    <p class="subtitulo-secao">Respostas claras para as perguntas mais comuns</p>
-
-    <div class="faq-container">
-        <div class="faq">
-            <h3>Como faço meu cadastro?</h3>
-            <p>Basta preencher seus dados básicos no aplicativo e aguardar a validação rápida.</p>
-        </div>
-
-        <div class="faq">
-            <h3>O serviço é seguro?</h3>
-            <p>Sim. Trabalhamos com monitoramento, verificação de dados e suporte contínuo 24/7.</p>
-        </div>
-
-        <div class="faq">
-            <h3>Posso cancelar uma solicitação?</h3>
-            <p>Sim, o cancelamento pode ser feito respeitando as regras gerais do serviço.</p>
-        </div>
-    </div>
-</section>
-
-<section id="secao_contato" class="contato">
-    <h2 class="titulo-secao">Entre em Contato</h2>
-    <p class="subtitulo-secao">Estamos prontos para atender você a qualquer momento</p>
-
-    <div class="contato-wrapper">
-        <div class="contato-card">
-            <h3>E-mail</h3>
-            <p>movcarlocacoes@gmail.com</p>
-        </div>
-        <div class="contato-card">
-            <h3>Telefone</h3>
-            <p>(19) 99831-8093</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 MOV CAR. Todos os direitos reservados.</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
