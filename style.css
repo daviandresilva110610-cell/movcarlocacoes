@@ -69,7 +69,7 @@ body {
 }
 
 .logo {
-    height: 40px;
+    height: 90px;
     width: auto;
     display: block;
     transition: var(--transition);
@@ -404,6 +404,10 @@ body {
 
 /* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 868px) {
+
+    .logo {
+        height: 70px; /* Tamanho ajustado especificamente para telas menores */
+    }
     .header-cta {
         display: none;
     }
