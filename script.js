@@ -4,27 +4,40 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // Controle do Menu Hamburger Mobile
+    // Controle do Menu Mobile Overlay
     const menuToggle = document.getElementById('menuToggle');
+    const menuClose = document.getElementById('menuClose');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    if (menuToggle && navMenu) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Fecha o menu mobile ao clicar em qualquer item do menu
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
+    function openMenu() {
+        if (navMenu) {
+            navMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Impede o rolamento da página de fundo
+        }
     }
 
-    // Animação suave para links de navegação interna
+    function closeMenu() {
+        if (navMenu) {
+            navMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Restaura o rolamento
+        }
+    }
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', openMenu);
+    }
+
+    if (menuClose) {
+        menuClose.addEventListener('click', closeMenu);
+    }
+
+    // Fecha o menu ao clicar em qualquer link
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Animação suave para links internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');

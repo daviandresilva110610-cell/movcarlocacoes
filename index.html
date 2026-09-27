@@ -16,32 +16,44 @@
 </head>
 <body>
 
-    <!-- CABEÇALHO -->
+    <!-- CABEÇALHO COM MENU OVERLAY MOBILE -->
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo-link" aria-label="MOV CAR - Página Inicial">
                 <img src="transparente.png" alt="MOV CAR Locação de Veículos" class="logo">
             </a>
 
+            <!-- Botão do Menu Hambúrguer (Mobile) -->
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu de Navegação">
-                <i data-lucide="menu" class="icon-open"></i>
-                <i data-lucide="x" class="icon-close"></i>
+                <i data-lucide="menu"></i>
             </button>
 
+            <!-- Menu de Navegação (Overlay Tela Cheia no Mobile) -->
             <nav class="nav-menu" id="navMenu">
+                <div class="mobile-header">
+                    <img src="transparente.png" alt="MOV CAR" class="logo">
+                    <button class="menu-close" id="menuClose" aria-label="Fechar Menu">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+
                 <ul class="nav-list">
-                    <li><a href="#" class="nav-link">Início</a></li>
                     <li><a href="#secao_beneficios" class="nav-link">Vantagens</a></li>
-                    <li><a href="#secao_funciona" class="nav-link">Como Funciona</a></li>
-                    <li><a href="#secao_sobre" class="nav-link">Quem Somos</a></li>
-                    <li><a href="#secao_depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#secao_funciona" class="nav-link">Como funciona</a></li>
+                    <li><a href="#secao_sobre" class="nav-link">Sobre</a></li>
                     <li><a href="#secao_duvida" class="nav-link">Dúvidas</a></li>
                     <li><a href="#secao_contato" class="nav-link">Contato</a></li>
                 </ul>
+
+                <div class="mobile-cta">
+                    <a href="https://form.respondi.app/WmkttNyV" target="_blank" rel="noopener noreferrer" class="btn-mobile-cta">
+                        Solicitar um carro <i data-lucide="arrow-up-right"></i>
+                    </a>
+                </div>
             </nav>
 
             <div class="header-cta">
-                <a href="https://form.respondi.app/WmkttNyV" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Quero Meu Carro</a>
+                <a href="https://form.respondi.app/WmkttNyV" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Solicitar um carro <i data-lucide="arrow-up-right"></i></a>
             </div>
         </div>
     </header>
@@ -51,87 +63,55 @@
         <section class="hero">
             <div class="container hero-container">
                 <span class="badge">
-                     Sem burocracia. Aprovação rápida.
+                     Locação para motoristas de app
                 </span>
-                <h1 class="hero-title">Alugue sem enrolação e não perca nenhum dia de faturamento.</h1>
+                <h1 class="hero-title">Um carro para<br>seguir rodando<span class="dot">.</span></h1>
                 <p class="hero-description">
-                    Carro revisado, seguro total e manutenção inclusa. Seu foco é rodar e ganhar dinheiro — a gente cuida do resto com atendimento humano e direto.
+                    Aluguel de veículos com manutenção inclusa, seguro e<br>conversa direta com quem resolve.
                 </p>
                 <div class="hero-actions">
                     <a href="https://form.respondi.app/WmkttNyV" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        Garantir Meu Carro Agora <i data-lucide="arrow-right"></i>
+                        Solicitar um carro <i data-lucide="arrow-up-right"></i>
                     </a>
                     <a href="https://wa.me/5519998318093" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                        <i data-lucide="message-circle"></i> Falar no WhatsApp
+                        Falar no WhatsApp <i data-lucide="arrow-up-right"></i>
                     </a>
-                </div>
-
-                <!-- METRICAS / RÓTULOS DE IMPACTO RÁPIDO -->
-                <div class="hero-highlights">
-                    <div class="highlight-item">
-                        <i data-lucide="shield-check"></i>
-                        <span>100% Seguro e Rastreado</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i data-lucide="wrench"></i>
-                        <span>Manutenção por Nossa Conta</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i data-lucide="clock"></i>
-                        <span>Análise Expressa</span>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO DE BENEFÍCIOS E SOLUÇÃO -->
-        <section id="secao_beneficios" class="section beneficios">
+        <!-- SEÇÃO DE VANTAGENS -->
+        <section id="secao_beneficios" class="section vantagens">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Por que a MOV CAR?</span>
-                    <h2 class="titulo-secao">Feito sob medida para a rotina de quem roda na rua</h2>
-                    <p class="subtitulo-secao">Chega de locadoras tradicionais que tratam motorista de aplicativo como número. Aqui o seu trabalho é respeitado.</p>
+                <div class="section-header-left">
+                    <span class="section-tag">O que está incluso</span>
+                    <h2 class="titulo-secao">O essencial, sem rodeios.</h2>
+                    <p class="subtitulo-secao">O carro é seu instrumento de trabalho. O cuidado com ele faz parte do nosso.</p>
                 </div>
 
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="icon-wrapper">
-                                <i data-lucide="clock-3" class="card-icon"></i>
-                            </div>
-                        </div>
-                        <h3>Aprovação Sem Drama</h3>
-                        <p>Esqueça exigências descabidas e dias de espera. Analisamos seu cadastro rápido para você estar faturando na rua o quanto antes.</p>
+                <div class="vantagens-list">
+                    <div class="vantagem-item">
+                        <span class="v-num">01</span>
+                        <i data-lucide="wrench" class="v-icon"></i>
+                        <h3 class="v-title">Manutenção inclusa</h3>
+                        <p class="v-desc">Óleo, freios, pneus e revisões periódicas por nossa conta, em oficinas parceiras.</p>
+                        <i data-lucide="arrow-up-right" class="v-arrow"></i>
                     </div>
 
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="icon-wrapper">
-                                <i data-lucide="wrench" class="card-icon"></i>
-                            </div>
-                        </div>
-                        <h3>Manutenção 100% Inclusa</h3>
-                        <p>Pneus, freios, troca de óleo e revisões periódicas por nossa conta. Zero surpresas no seu orçamento final do mês.</p>
+                    <div class="vantagem-item">
+                        <span class="v-num">02</span>
+                        <i data-lucide="shield-check" class="v-icon"></i>
+                        <h3 class="v-title">Seguro e rastreamento</h3>
+                        <p class="v-desc">Carros monitorados e com cobertura para roubo, furto, colisão e terceiros.</p>
+                        <i data-lucide="arrow-up-right" class="v-arrow"></i>
                     </div>
 
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="icon-wrapper">
-                                <i data-lucide="shield-check" class="card-icon"></i>
-                            </div>
-                        </div>
-                        <h3>Proteção Total 24h</h3>
-                        <p>Sua segurança em primeiro lugar. Veículos com seguro completo e rastreamento constante para você trabalhar tranquilo a qualquer hora.</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="icon-wrapper">
-                                <i data-lucide="refresh-cw" class="card-icon"></i>
-                            </div>
-                        </div>
-                        <h3>Agilidade em Imprevistos</h3>
-                        <p>Se o carro precisar de manutenção, nosso compromisso é resolver com velocidade para você não perder seus dias de ganho.</p>
+                    <div class="vantagem-item">
+                        <span class="v-num">03</span>
+                        <i data-lucide="message-circle" class="v-icon"></i>
+                        <h3 class="v-title">Atendimento direto</h3>
+                        <p class="v-desc">Você fala com a equipe pelo WhatsApp para tratar da locação e dos imprevistos.</p>
+                        <i data-lucide="arrow-up-right" class="v-arrow"></i>
                     </div>
                 </div>
             </div>
@@ -139,176 +119,155 @@
 
         <!-- SEÇÃO COMO FUNCIONA -->
         <section id="secao_funciona" class="section funciona">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Passo a Passo</span>
-                    <h2 class="titulo-secao">Como funciona na prática</h2>
-                    <p class="subtitulo-secao">Do preenchimento do formulário ao pé no acelerador em 3 etapas simples</p>
+            <div class="container split-layout">
+                <div class="split-left">
+                    <span class="section-tag">Do cadastro à retirada</span>
+                    <h2 class="titulo-secao">Como funciona</h2>
                 </div>
 
-                <div class="steps-grid">
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">01</span>
-                            <i data-lucide="file-text" class="step-icon"></i>
+                <div class="split-right">
+                    <div class="steps-list">
+                        <div class="step-item">
+                            <span class="step-num">01</span>
+                            <div class="step-content">
+                                <h3>Envie seus dados</h3>
+                                <p>Preencha o formulário para iniciarmos a análise do seu cadastro.</p>
+                            </div>
                         </div>
-                        <h3>Preencha o Formulário</h3>
-                        <p>Leva menos de 2 minutos. Envie seus dados básicos para nossa equipe dar início à validação.</p>
-                    </div>
 
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">02</span>
-                            <i data-lucide="user-check" class="step-icon"></i>
+                        <div class="step-item">
+                            <span class="step-num">02</span>
+                            <div class="step-content">
+                                <h3>Converse com a equipe</h3>
+                                <p>Entramos em contato para confirmar a disponibilidade e combinar os detalhes.</p>
+                            </div>
                         </div>
-                        <h3>Atendimento Humano</h3>
-                        <p>Nossa equipe analisa a disponibilidade e entra em contato via WhatsApp para combinar os detalhes sem enrolação.</p>
-                    </div>
 
-                    <div class="step-card">
-                        <div class="step-header">
-                            <span class="step-number">03</span>
-                            <i data-lucide="key" class="step-icon"></i>
+                        <div class="step-item">
+                            <span class="step-num">03</span>
+                            <div class="step-content">
+                                <h3>Retire o carro</h3>
+                                <p>Com tudo acertado, você retira um veículo revisado e pronto para rodar.</p>
+                            </div>
                         </div>
-                        <h3>Chave na Mão e Pé na Estrada</h3>
-                        <p>Retire seu carro higienizado, revisado e pronto para você aceitar corridas e faturar imediatamente.</p>
                     </div>
-                </div>
-
-                <div class="cta-banner-inline">
-                    <div class="banner-text">
-                        <h3>Quer começar a rodar ainda esta semana?</h3>
-                        <p>Temos frota pronta esperando por você.</p>
+                    
+                    <div class="step-action">
+                        <a href="https://form.respondi.app/WmkttNyV" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            Iniciar cadastro <i data-lucide="arrow-up-right"></i>
+                        </a>
                     </div>
-                    <a href="https://form.respondi.app/WmkttNyV" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        Quero Meu Cadastro Aprovado <i data-lucide="arrow-right"></i>
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO SOBRE NÓS -->
+        <!-- SEÇÃO SOBRE -->
         <section id="secao_sobre" class="section sobre">
-            <div class="container">
-                <div class="sobre-grid">
-                    <div class="sobre-content">
-                        <span class="section-tag">Quem Somos</span>
-                        <h2 class="titulo-secao text-left">Gente real apoiando quem faz a cidade girar</h2>
-                        <p class="sobre-texto">
-                            Sabemos que para o motorista de aplicativo, cada hora com o carro parado é dinheiro a menos na mesa. A <strong>MOV CAR</strong> não nasceu dentro de uma sala corporativa distante, mas da convivência direta com quem vive no volante.
-                        </p>
-                        <p class="sobre-texto">
-                            Entendemos perfeitamente a sua rotina: o trânsito pesado, a exigência das notas das plataformas e a necessidade de rodar com um carro confortável e confiável. Por isso, eliminamos a burocracia pesada das grandes locadoras e colocamos pessoas de verdade no atendimento.
-                        </p>
-                        <div class="sobre-highlights">
-                            <div class="sobre-item">
-                                <i data-lucide="check-circle-2" class="check-icon"></i>
-                                <span>Frota rigorosamente revisada e limpa</span>
-                            </div>
-                            <div class="sobre-item">
-                                <i data-lucide="check-circle-2" class="check-icon"></i>
-                                <span>Atendimento via WhatsApp rápido e sem robôs</span>
-                            </div>
-                            <div class="sobre-item">
-                                <i data-lucide="check-circle-2" class="check-icon"></i>
-                                <span>Contratos transparentes e sem pegadinhas</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sobre-card-highlight">
-                        <div class="quote-box">
-                            <i data-lucide="quote" class="quote-icon"></i>
-                            <p class="quote-text">
-                                "Seu instrumento de trabalho é o nosso compromisso. Se você não roda, nós também não ficamos satisfeitos."
-                            </p>
-                            <span class="quote-author">— Equipe MOV CAR</span>
-                        </div>
+            <div class="container split-layout">
+                <div class="split-left">
+                    <span class="section-tag">Sobre a MOV CAR</span>
+                    <h2 class="titulo-secao">A rua não espera.<br>A gente entende.</h2>
+                </div>
+                
+                <div class="split-right">
+                    <div class="sobre-text">
+                        <p>Quem trabalha dirigindo precisa de um carro confiável e de respostas claras quando algo acontece. É para essa rotina que a MOV CAR oferece locação de veículos.</p>
+                        <p>Você trata do cadastro e da locação diretamente com a nossa equipe, sem perder tempo entre setores e respostas automáticas.</p>
+                        
+                        <ul class="sobre-checks">
+                            <li><i data-lucide="check"></i> Carros revisados</li>
+                            <li><i data-lucide="check"></i> Atendimento pelo WhatsApp</li>
+                            <li><i data-lucide="check"></i> Condições explicadas antes de fechar</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- SEÇÃO DÚVIDAS FREQUENTES -->
+        <!-- SEÇÃO DÚVIDAS -->
         <section id="secao_duvida" class="section duvidas">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Tire Suas Dúvidas</span>
-                    <h2 class="titulo-secao">Perguntas Frequentes</h2>
-                    <p class="subtitulo-secao">Transparência total antes de você tomar qualquer decisão</p>
+            <div class="container split-layout">
+                <div class="split-left">
+                    <span class="section-tag">Antes de começar</span>
+                    <h2 class="titulo-secao">Dúvidas comuns</h2>
+                    <p class="subtitulo-secao">Se a sua pergunta não estiver aqui, fale diretamente com a equipe.</p>
                 </div>
 
-                <div class="faq-accordion">
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>O que preciso para cadastrar e alugar um veículo?</span>
-                            <i data-lucide="chevron-down" class="faq-icon"></i>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>É simples: você precisa ter CNH definitiva com observação EAR (Exerce Atividade Remunerada), perfil ativo ou em aprovação nos aplicativos de transporte e comprovante de residência. Basta clicar no botão de cadastro e enviar seus dados.</p>
-                        </div>
-                    </details>
+                <div class="split-right">
+                    <div class="faq-accordion">
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>O que preciso para alugar?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Você precisa ter CNH definitiva com observação EAR (Exerce Atividade Remunerada), perfil ativo ou em aprovação nos aplicativos e comprovante de residência.</p>
+                            </div>
+                        </details>
 
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Como funciona a manutenção do carro?</span>
-                            <i data-lucide="chevron-down" class="faq-icon"></i>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Toda a manutenção preventiva e corretiva decorrente de uso normal (troca de óleo, pastilhas de freio, pneus, revisões periódicas) é 100% por nossa conta nas oficinas parceiras credenciadas.</p>
-                        </div>
-                    </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Como funciona a manutenção?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Toda a manutenção preventiva e corretiva de uso normal (óleo, pastilhas, pneus, revisões) é por nossa conta nas oficinas credenciadas.</p>
+                            </div>
+                        </details>
 
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Os veículos possuem seguro e rastreador?</span>
-                            <i data-lucide="chevron-down" class="faq-icon"></i>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Com certeza. Todos os carros da MOV CAR são monitorados via satélite 24h e possuem cobertura de seguro contra roubo, furto, colisão e terceiros para garantir a sua tranquilidade enquanto roda.</p>
-                        </div>
-                    </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Os carros têm seguro?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Sim. Todos os carros são monitorados 24h e possuem cobertura contra roubo, furto, colisão e terceiros.</p>
+                            </div>
+                        </details>
 
-                    <details class="faq-item">
-                        <summary class="faq-question">
-                            <span>Quais são as formas de pagamento disponíveis?</span>
-                            <i data-lucide="chevron-down" class="faq-icon"></i>
-                        </summary>
-                        <div class="faq-answer">
-                            <p>Oferecemos condições flexíveis com pagamentos semanais simplificados via PIX ou boleto bancário, auxiliando na organização do seu fluxo de caixa.</p>
-                        </div>
-                    </details>
+                        <details class="faq-item">
+                            <summary class="faq-question">
+                                <span>Como é feito o pagamento?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </summary>
+                            <div class="faq-answer">
+                                <p>Oferecemos pagamentos semanais via PIX ou boleto bancário, facilitando o seu fluxo de caixa.</p>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- SEÇÃO CONTATO -->
         <section id="secao_contato" class="section contato">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Fale Conosco</span>
-                    <h2 class="titulo-secao">Pronto para rodar com tranquilidade?</h2>
-                    <p class="subtitulo-secao">Fale diretamente com a nossa equipe sem passar por atalhos ou robôs</p>
+            <div class="container split-layout">
+                <div class="split-left">
+                    <span class="section-tag">Contato</span>
+                    <h2 class="titulo-secao">Vamos conversar?</h2>
+                    <p class="subtitulo-secao">Conte o que você precisa e tire suas dúvidas antes de decidir.</p>
                 </div>
 
-                <div class="contato-grid">
-                    <a href="https://wa.me/5519998318093" target="_blank" rel="noopener noreferrer" class="contato-card destaque">
-                        <div class="contato-icon-wrapper">
-                            <i data-lucide="phone"></i>
-                        </div>
-                        <span class="contato-label">WhatsApp / Atendimento Direto</span>
-                        <strong class="contato-value">(19) 99831-8093</strong>
-                        <span class="contato-sub">Resposta rápida em horário comercial</span>
-                    </a>
+                <div class="split-right">
+                    <div class="contato-links">
+                        <a href="https://wa.me/5519998318093" target="_blank" rel="noopener noreferrer" class="contato-row">
+                            <i data-lucide="message-circle" class="c-icon"></i>
+                            <div class="c-info">
+                                <span class="c-label">WhatsApp</span>
+                                <strong class="c-val">(19) 99831-8093</strong>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="c-arrow"></i>
+                        </a>
 
-                    <a href="mailto:movcarlocacoes@gmail.com" class="contato-card">
-                        <div class="contato-icon-wrapper">
-                            <i data-lucide="mail"></i>
-                        </div>
-                        <span class="contato-label">E-mail Corporativo</span>
-                        <strong class="contato-value">movcarlocacoes@gmail.com</strong>
-                        <span class="contato-sub">Para dúvidas gerais ou documentos</span>
-                    </a>
+                        <a href="mailto:movcarlocacoes@gmail.com" class="contato-row">
+                            <i data-lucide="mail" class="c-icon"></i>
+                            <div class="c-info">
+                                <span class="c-label">E-mail</span>
+                                <strong class="c-val">movcarlocacoes@gmail.com</strong>
+                            </div>
+                            <i data-lucide="arrow-up-right" class="c-arrow"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -317,20 +276,14 @@
     <!-- RODAPÉ -->
     <footer class="footer">
         <div class="container footer-container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="transparente.png" alt="MOV CAR" class="footer-logo">
-                    <p>Mobilidade sem burocracia para quem move as cidades todos os dias.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#">Início</a>
-                    <a href="#secao_beneficios">Vantagens</a>
-                    <a href="#secao_funciona">Como Funciona</a>
-                    <a href="#secao_duvida">Dúvidas</a>
-                </div>
+            <div class="footer-logo-box">
+                <img src="transparente.png" alt="MOV CAR" class="footer-logo">
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 MOV CAR Locações. Todos os direitos reservados.</p>
+            <div class="footer-center">
+                <p>Locação de veículos para quem trabalha na direção.</p>
+            </div>
+            <div class="footer-right">
+                <p>&copy; 2026 MOV CAR Locações</p>
             </div>
         </div>
     </footer>
