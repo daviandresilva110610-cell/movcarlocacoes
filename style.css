@@ -4,11 +4,11 @@
     --bg-elevated: #0d1320;        /* Tom levemente mais claro para alternância */
     --primary: #38bdf8;
     --text-primary: #ffffff;
-    --text-secondary: #a0aec0;     /* Tom ajustado para melhor contraste e leitura */
+    --text-secondary: #a0aec0;     
     --border: rgba(255, 255, 255, 0.08);
     --border-highlight: rgba(56, 189, 248, 0.3);
     --border-divider: rgba(56, 189, 248, 0.15);
-    --radius-sm: 4px;
+    --radius-sm: 6px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -28,14 +28,16 @@ body {
     background-color: var(--bg-main);
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-primary);
+    font-weight: 300; /* Texto base mais leve */
     line-height: 1.6;
     padding-top: 80px;
     -webkit-font-smoothing: antialiased;
 }
 
+/* CONTAINER EXPANDIDO / TELA MAIS ESTICADA */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1380px; /* Aumentado de 1200px para 1380px */
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -58,7 +60,7 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    max-width: 1200px;
+    max-width: 1380px; /* Aumentado de 1200px para 1380px */
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -76,14 +78,14 @@ body {
 
 .nav-list {
     display: flex;
-    gap: 32px;
+    gap: 36px;
     list-style: none;
 }
 
 .nav-link {
     text-decoration: none;
     color: var(--text-secondary);
-    font-weight: 500;
+    font-weight: 400; /* Suavizado de 500 para 400 */
     font-size: 0.9rem;
     transition: var(--transition);
 }
@@ -100,7 +102,7 @@ body {
     gap: 8px;
     padding: 12px 24px;
     border-radius: var(--radius-sm);
-    font-weight: 600;
+    font-weight: 500; /* Suavizado de 600 para 500 */
     font-size: 0.95rem;
     text-decoration: none;
     transition: var(--transition);
@@ -146,7 +148,7 @@ body {
     display: none;
 }
 
-/* HERO SECTION */
+/* HERO SECTION COM SUPERPOSIÇÃO DE FADE */
 .hero {
     position: relative;
     padding: 140px 0 120px;
@@ -173,19 +175,19 @@ body {
     background-position: center;
     opacity: 0;
     z-index: 1;
-    transition: opacity 2.5s ease-in-out;
+    transition: opacity 1.5s ease-in-out;
 }
 
-/* Imagem anterior: continua 100% visível na camada de baixo */
-.hero-bg.last-active {
-    opacity: 1;
-    z-index: 1;
-}
-
-/* Imagem nova: entra suavemente na camada de cima */
+/* Imagem ativada na frente */
 .hero-bg.active {
     opacity: 1;
     z-index: 2;
+}
+
+/* Imagem de fundo sustentada durante o fade */
+.hero-bg.showing {
+    opacity: 1;
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -195,12 +197,12 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, #070b13 0%, rgba(7, 11, 19, 0.88) 50%, rgba(7, 11, 19, 0.45) 100%);
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-container {
     position: relative;
-    z-index: 3;
+    z-index: 4;
 }
 
 .badge {
@@ -209,7 +211,7 @@ body {
     gap: 12px;
     color: var(--primary);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600; /* Suavizado de 700 para 600 */
     text-transform: uppercase;
     letter-spacing: 1.5px;
     margin-bottom: 24px;
@@ -225,7 +227,7 @@ body {
 
 .hero-title {
     font-size: clamp(2.8rem, 5vw, 4.5rem);
-    font-weight: 800;
+    font-weight: 600; /* Suavizado de 800 para 600 */
     line-height: 1.15;
     margin-bottom: 24px;
     letter-spacing: -1.2px;
@@ -238,6 +240,7 @@ body {
 .hero-description {
     font-size: 1.15rem;
     color: var(--text-secondary);
+    font-weight: 300;
     margin-bottom: 40px;
     line-height: 1.7;
 }
@@ -267,7 +270,7 @@ body {
 .section-tag {
     color: var(--primary);
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600; /* Suavizado de 700 para 600 */
     text-transform: uppercase;
     letter-spacing: 1.5px;
     display: block;
@@ -276,7 +279,7 @@ body {
 
 .titulo-secao {
     font-size: clamp(2rem, 3.5vw, 3.2rem);
-    font-weight: 700;
+    font-weight: 600; /* Suavizado de 700 para 600 */
     letter-spacing: -0.8px;
     line-height: 1.25;
     margin-bottom: 20px;
@@ -284,6 +287,7 @@ body {
 
 .subtitulo-secao {
     color: var(--text-secondary);
+    font-weight: 300;
     font-size: 1.1rem;
     line-height: 1.7;
 }
@@ -292,7 +296,7 @@ body {
 .split-layout {
     display: grid;
     grid-template-columns: 4fr 6fr;
-    gap: 80px;
+    gap: 90px;
 }
 
 .split-left {
@@ -328,7 +332,7 @@ body {
 .v-num {
     color: var(--text-secondary);
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .v-icon {
@@ -339,12 +343,13 @@ body {
 
 .v-title {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500; /* Suavizado de 600 para 500 */
     color: var(--text-primary);
 }
 
 .v-desc {
     font-size: 1rem;
+    font-weight: 300;
     color: var(--text-secondary);
 }
 
@@ -375,19 +380,20 @@ body {
 
 .step-num {
     color: var(--primary);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.95rem;
     padding-top: 2px;
 }
 
 .step-content h3 {
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500; /* Suavizado de 600 para 500 */
     margin-bottom: 8px;
 }
 
 .step-content p {
     color: var(--text-secondary);
+    font-weight: 300;
     font-size: 1rem;
     line-height: 1.65;
 }
@@ -399,6 +405,7 @@ body {
 /* SOBRE */
 .sobre-text p {
     font-size: 1.1rem;
+    font-weight: 300;
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 24px;
@@ -419,7 +426,7 @@ body {
     align-items: center;
     gap: 14px;
     font-size: 1.05rem;
-    font-weight: 500;
+    font-weight: 400; /* Suavizado de 500 para 400 */
 }
 
 .sobre-checks li i {
@@ -444,7 +451,7 @@ body {
 
 .faq-question {
     padding: 28px 0;
-    font-weight: 600;
+    font-weight: 500; /* Suavizado de 600 para 500 */
     font-size: 1.1rem;
     cursor: pointer;
     display: flex;
@@ -471,6 +478,7 @@ body {
 .faq-answer {
     padding: 0 0 28px 0;
     color: var(--text-secondary);
+    font-weight: 300;
     font-size: 0.98rem;
     line-height: 1.7;
 }
@@ -510,7 +518,7 @@ body {
 
 .c-label {
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600; /* Suavizado de 700 para 600 */
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -518,7 +526,7 @@ body {
 
 .c-val {
     font-size: 1.25rem;
-    font-weight: 700;
+    font-weight: 600; /* Suavizado de 700 para 600 */
     color: var(--text-primary);
 }
 
@@ -545,20 +553,18 @@ body {
 }
 
 .footer-logo {
-    height: 60px;
+    height: 24px;
 }
 
 .footer-center p,
 .footer-right p {
     color: var(--text-secondary);
+    font-weight: 300;
     font-size: 0.88rem;
 }
 
-/* =========================================================
-   RESPONSIVIDADE E OTIMIZAÇÃO DE LEITURA / ÍCONES EM MOBILE
-   ========================================================= */
+/* RESPONSIVIDADE MOBILE */
 @media (max-width: 868px) {
-    /* Ajustes Gerais de Leitura */
     body {
         padding-top: 70px;
     }
@@ -587,7 +593,6 @@ body {
         display: none;
     }
 
-    /* Botão do Hambúrguer com ícone menor */
     .menu-toggle {
         display: flex;
         align-items: center;
@@ -604,7 +609,7 @@ body {
         height: 22px;
     }
 
-    /* Overlay do Menu Mobile */
+    /* Menu Mobile Overlay */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -672,7 +677,7 @@ body {
         padding: 18px 0;
         color: #ffffff;
         font-size: 1.1rem;
-        font-weight: 600;
+        font-weight: 500;
         text-decoration: none;
     }
 
@@ -692,7 +697,7 @@ body {
         background-color: #38bdf8;
         color: #070b13;
         font-size: 0.95rem;
-        font-weight: 700;
+        font-weight: 600;
         border-radius: var(--radius-sm);
         text-decoration: none;
     }
@@ -702,7 +707,6 @@ body {
         height: 16px;
     }
 
-    /* Hero Section em Telas Menores */
     .hero {
         padding: 80px 0 60px;
     }
@@ -728,7 +732,7 @@ body {
         font-size: 1rem;
         line-height: 1.6;
         margin-bottom: 28px;
-        color: #cbd5e1; /* Leve aumento no contraste para facilitá-lo em telas pequenas */
+        color: #cbd5e1;
     }
 
     .hero-actions {
@@ -748,7 +752,6 @@ body {
         height: 16px;
     }
 
-    /* Layout Split e Títulos */
     .split-layout {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -769,7 +772,6 @@ body {
         line-height: 1.6;
     }
 
-    /* Lista de Vantagens Mobile */
     .section-header-left {
         margin-bottom: 32px;
     }
@@ -806,7 +808,6 @@ body {
         height: 16px;
     }
 
-    /* Passos / Como Funciona Mobile */
     .step-item {
         grid-template-columns: 32px 1fr;
         gap: 12px;
@@ -837,7 +838,6 @@ body {
         justify-content: center;
     }
 
-    /* Seção Sobre Mobile */
     .sobre-text p {
         font-size: 1rem;
         line-height: 1.7;
@@ -860,7 +860,6 @@ body {
         height: 16px;
     }
 
-    /* Perguntas Frequentes / FAQ Mobile */
     .faq-question {
         padding: 20px 0;
         font-size: 1rem;
@@ -878,7 +877,6 @@ body {
         color: #cbd5e1;
     }
 
-    /* Contato Mobile */
     .contato-row {
         grid-template-columns: 32px 1fr 20px;
         padding: 24px 0;
@@ -898,7 +896,6 @@ body {
         height: 16px;
     }
 
-    /* Rodapé Mobile */
     .footer {
         padding: 32px 0;
     }

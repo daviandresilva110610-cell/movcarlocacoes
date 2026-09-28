@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const heroBgs = document.querySelectorAll('.hero-bg');
 if (heroBgs.length > 0) {
     let currentBgIndex = 0;
-    const intervalTime = 4000; // Tempo em ms entre as trocas
+    const intervalTime = 5400; // Tempo em ms entre as trocas
 
     setInterval(() => {
         const previousBg = heroBgs[currentBgIndex];
